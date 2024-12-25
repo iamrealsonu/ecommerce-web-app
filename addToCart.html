@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Store Website</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Jost:wght@300;400;500;700&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- **** Start Heading Section **** -->
+    <header class="section-navbar">
+      <section class="top_txt">
+        <div class="head container">
+          <div class="head_txt">
+            <p>Free shipping across country, 30-day easy return and replace.</p>
+          </div>
+          <div class="sing_in_up">
+            <a href="# ">SIGN IN</a>
+            <a href="# ">SIGN UP</a>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="index.html">
+            <h1>DIGITAL <span>STORE</span></h1>
+          </a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li class="nav-item">
+              <a href="/" class="nav-link">Home </a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">about</a>
+            </li>
+            <li class="nav-item">
+              <a href="products.html" class="nav-link">products</a>
+            </li>
+            <li class="nav-item">
+              <a href="contact.html" class="nav-link">contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                href="addToCart.html"
+                class="nav-link add-to-cart-button"
+                id="cartValue"
+              >
+                <i class="fa-solid fa-cart-shopping"></i> 0</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- **** End Navbar **** -->
+    <!-- Add to cart section Started -->
+    <section class="addToCartElement">
+      <div class="container">
+        <section>
+          <div id="productCartContainer"></div>
+        </section>
+
+        <section class="productCartTotalElem">
+          <div class="productCartTotalElement">
+            <p>Products Price BreakUp</p>
+            <div class="productOrderTotal">
+              <div>
+                <p>Total Price:</p>
+                <p class="productSubTotal">0</p>
+              </div>
+              <div>
+                <p>GST:-</p>
+                <p class="productTax">₹100</p>
+              </div>
+              <hr />
+              <div>
+                <p>Payable Amount:</p>
+                <p class="productFinalTotal">0</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Template for a  Cart product -->
+    <template id="productCartTemplate">
+      <div class="cards" id="cardValue">
+        <article class="information [ card ]">
+          <div>
+            <span class="category"></span>
+          </div>
+          <div class="imageContainer">
+            <img class="productImage" src="" alt="" />
+          </div>
+
+          <h2 class="productName"></h2>
+
+          <p class="productPrice"></p>
+
+          <div class="stockElement">
+            <button class="cartIncrement">+</button>
+            <p class="productQuantity" data-quantity="1">1</p>
+            <button class="cartDecrement">-</button>
+          </div>
+
+          <!-- button for remove items in add cart -->
+          <button class="add-to-cart-button remove-to-cart-button">
+            Remove
+          </button>
+        </article>
+      </div>
+    </template>
+
+    <!-- **** Start footer Section **** -->
+    <footer class="section-footer">
+      <script src="footer.js"></script>
+    </footer>
+    <!-- **** End footer Section **** -->
+
+    <script type="module" src="showAddToCartCards.js"></script>
+  </body>
+</html>
